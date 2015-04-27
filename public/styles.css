@@ -1,0 +1,16 @@
+body {
+  font-family: Verdana, Geneva, sans-serif;
+  font-size: 10pt;
+}
+.entry {
+  margin-bottom: 12px;
+}
+.entry .title, .entry .title a {
+  color: #222;
+}
+.entry .meta {
+  font-size: 8pt;
+}
+.entry .meta, .entry .meta a {
+  color: #666;
+}
