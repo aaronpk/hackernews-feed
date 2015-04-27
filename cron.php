@@ -38,9 +38,15 @@ for($i=0; $i<30; $i++) {
 if($added > 0) {
   echo "\n\n";
 
-  $entries = array_slice($entries, -20);
+  # Sort the stories by date discovered 
   usort($entries, function($a,$b){
     return $a['date'] > $b['date'];
+  });
+  # Remove all but the last 20 entries
+  $entries = array_slice($entries, -20);
+  # Reverse the list so the newest entries are on top
+  usort($entries, function($a,$b){
+    return $a['date'] <= $b['date'];
   });
 
   file_put_contents($feed_file, json_encode($entries));
