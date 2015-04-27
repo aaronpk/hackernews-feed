@@ -50,7 +50,7 @@ if($added > 0) {
   curl_setopt($ch, CURLOPT_POST, TRUE);
   curl_setopt($ch, CURLOPT_POSTFIELDS, http_build_query(array(
     'hub.mode' => 'publish',
-    'hub.topic' => 'http://hackernews.pin13.net/'
+    'hub.topic' => 'http://hackernews.p3k.io/'
   )));
   $result = curl_exec($ch);
   echo "Publish result:\n";
